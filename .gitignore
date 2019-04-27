@@ -3,3 +3,4 @@
 
 # Env file
 *.env
+/.vscode
