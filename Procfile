@@ -1,1 +1,1 @@
-web: nodemon --exec babel-node src/server.js
+web: npm start
