@@ -2,7 +2,7 @@
  const config = require('./config');
  mongoose.Promise = global.Promise;
  // ${config.mongo.host}:${config.mongo.port}/${config.mongo.db}
- mongoose.connect(`mongodb://admin:1CKolbExQc9MQBJktuAN@@cluster0-shard-00-00-xiqw7.mongodb.net:27017/test`, { useNewUrlParser: true }).then(
+ mongoose.connect(`mongodb+srv://admin:1CKolbExQc9MQBJktuAN@@cluster0-xiqw7.mongodb.net/test?retryWrites=true`, { useNewUrlParser: true }).then(
      () => {
          console.log("Database is connected");
      },
