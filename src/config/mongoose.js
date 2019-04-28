@@ -10,7 +10,9 @@
          console.log("Can not connect to the database'+ err");
          throw new Error(`unable to connect to database: ${config.mongo.host}`);
      }
- );
+ ).catch((error) => {
+     console.log("Can not connect to the database'+ err");
+ });
 
  const connection = mongoose.connection;
  connection.once('open', () => {
