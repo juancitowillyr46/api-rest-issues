@@ -1,6 +1,6 @@
  const mongoose = require('mongoose');
  const config = require('./config');
- //mongoose.Promise = global.Promise;
+ mongoose.Promise = global.Promise;
  // ${config.mongo.host}:${config.mongo.port}/${config.mongo.db}
  mongoose.connect(`mongodb+srv://admin:1CKolbExQc9MQBJktuAN_@cluster0-xiqw7.mongodb.net/test?retryWrites=true`, { useNewUrlParser: true }).then(
      () => {
@@ -12,7 +12,7 @@
      }
  ).catch((error) => {
      throw new Error(`Promise error`);
- });;
+ });
 
  const connection = mongoose.connection;
  connection.once('open', () => {
